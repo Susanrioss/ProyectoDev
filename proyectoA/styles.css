@@ -1,0 +1,223 @@
+/* Reset ligero */
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Layout general */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #fafafa;
+  color: #222;
+  display: flex;
+  min-height: 100vh;
+  align-items: flex-start;
+}
+
+/* ================== Barra lateral ================== */
+.sidebar {
+  width: 68px; /* ancho similar a la captura */
+  background: #ffffff;
+  border-right: 1px solid #e6e6e6;
+  padding: 10px 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Permitir scroll interno cuando hay muchos iconos */
+.icon-bar {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ocultar scrollbar en navegadores Webkit pero permitir scroll */
+.icon-bar::-webkit-scrollbar {
+  width: 6px;
+}
+.icon-bar::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,0.08);
+  border-radius: 10px;
+}
+
+/* lista de iconos */
+.icon-bar ul {
+  list-style: none;
+  padding: 6px 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* cada icono */
+.icon-bar li {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  transition: background 0.12s ease, transform 0.12s ease;
+}
+
+.icon-bar a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* imagen dentro del enlace */
+.icon-bar img {
+  width: 34px;
+  height: 34px;
+  object-fit: cover;
+  display: block;
+}
+
+/* hover y focus */
+.icon-bar li:hover,
+.icon-bar a:focus {
+  background: rgba(59,73,223,0.06);
+  transform: translateY(-2px);
+  outline: none;
+}
+
+/* ================== Contenido principal ================== */
+.content {
+  flex: 1;
+  max-width: 420px;
+  padding: 20px;
+}
+
+/* logo estilo caja naranja */
+header {
+  text-align: left;
+  margin-bottom: 14px;
+}
+
+.logo {
+  background: #d86c1a; /* naranja semejante */
+  color: #fff;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  font-size: 1.25rem;
+}
+
+/* tarjeta blanca */
+.welcome-card {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 1px 3px rgba(16,24,40,0.04);
+  margin-bottom: 14px;
+}
+
+.welcome-card h2 {
+  font-size: 1rem;
+  margin: 0 0 10px 0;
+  color: #111827;
+}
+
+.welcome-card p {
+  margin: 0 0 10px 0;
+  color: #374151;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+/* boton estilo outline azul */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1.5px solid #3b49df;
+  color: #3b49df;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background: #3b49df;
+  color: #fff;
+}
+
+/* acceso texto */
+.access {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+/* enlaces principales */
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.links li {
+  margin: 8px 0;
+  font-size: 0.95rem;
+}
+
+.links a {
+  color: #111827;
+  text-decoration: none;
+}
+
+/* sección "Otro" */
+.other h3 {
+  font-size: 0.95rem;
+  margin: 14px 0 8px 0;
+  color: #6b7280;
+}
+
+.other ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.other li {
+  margin: 8px 0;
+  font-size: 0.92rem;
+}
+
+.other a {
+  color: #111827;
+  text-decoration: none;
+}
+
+/* ===== Responsividad ===== */
+@media (max-width: 720px) {
+  .sidebar {
+    width: 56px;
+    padding: 8px 4px;
+  }
+  .content {
+    padding: 12px;
+    max-width: 100%;
+  }
+}
