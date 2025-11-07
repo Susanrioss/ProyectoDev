@@ -1,1 +1,145 @@
-Aqui va el codigo Css, siempre que vayan a subir algo aqui pongan un //con su nombre y que parte de su codigo es.
+/* briseyda barra de navegacion y botones */
+
+* {
+    margin: 0; /* elimina margenes int */
+    padding: 0;/* elimina espacios int */
+    box-sizing: border-box; /* bordes y espacios dentro del mismo ancho y alto */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; /*define la tipografia del doc.*/
+
+}
+
+body {
+    background-color: #fff; /* fondo blanco */
+    display: flex; /* acomoda a la esquina superior izquierda */
+    justify-content: flex-start; /* arriba de izq. a der.*/
+    align-items: flex-start;     /* elemtos arriba */
+    padding: 10px 60px; /* espacio al rededor del contenido */ 
+    padding-top:80px; 
+}
+
+header {
+    position: fixed; /* mantiene la barra arriba */
+    top: 0; /* lo coloca en la parte alta de la pantalla */
+    left: 0; /* alinea al borde izquierdo */
+    right: 0; /*  alinea al borde derecho */
+    display: flex; /* acomoda los elementos dentro del header en línea */
+    align-items: center; /* centra los elementos */
+    gap: 20px; /* deja un espacio de 20px entre cada elemento */
+    width: 100%; /* header ocupa el ancho de la pantalla */
+    max-width: 100%; /* evita que crezca más del ancho de la pantalla */
+    background-color: #fff;  /* fondo blanco */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08); /* sombra ligera */
+    padding: 10px 60px;  /* espacio interno */
+    z-index: 1000;  /* siempre por encima del contenido */
+}
+
+header form {
+    flex: 1;
+    max-width: 600px; /* controla el largo de la barra */
+}
+
+header {
+    justify-content: flex-start; /* alinea todo */
+    gap: 15px;
+}
+
+.logo img {
+    width: 50px; /* ancho del logo */
+    height: 40px;/* alto del logo */
+    border-radius: 6px; /* redondea esquinas del logo */
+    }
+
+form {
+    flex: 1; /* hace que el formulario use todo el espacio disponible */
+    display: flex; /* acomoda los elementos en linea*/
+    align-items: center; /* centra los elementos verticalmente */
+    justify-content: space-between; /* deja espacio entre los elementos */
+    border: 1px solid #ccc; /* le pone un borde */
+    border-radius: 6px; /* redondea un poco las esquinas */
+    padding: 8px 12px; /* agrega espacio dentro del formulario */
+    background-color: #fff; /* pone el fondo blanco */
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1); /* agrega una sombra */
+    transition: border-color 0.3s; /* color del borde cambie suavemente */
+}
+
+form:focus-within {
+    border: 2px solid #3a48b8; /* cuando haces clic dentro del formulario, el borde se pone azul */
+}
+
+.search-icon {
+    color: #606168; /* color gris del ícono de la lupa */
+    margin-right: 10px; /* espacio a la derecha del ícono */
+    font-size: 18px; /* tamaño del icono */
+}
+
+input {
+    flex: 1; 
+    border: none; /* quita el borde del campo de tx */
+    outline: none; /* quita el contorno azul al hacer clic */
+    font-size: 15px; /* tamaño del texto que se escribe */
+    color: #333; /* color del texto */
+}
+
+input::placeholder {
+    color: #999; /* color del tx que aparece como sugerencia */
+}
+
+.powered {
+    font-size: 13px; /* tamaño de tx */
+    color: #606168; /* color */
+}
+
+.algolia-logo {
+    color: #606168; /* color del icon angolia */
+}
+
+.login, .create {
+    position: absolute; /* coloca los botones en una posición fija */
+    top: 15px; /* alinea a la parte superior */
+    font-size: 14px; /* tamaño del tx */
+    font-weight: 500; /* grosor medio del tx */
+    padding: 6px 14px; /* espaciado interno del tx */
+    border-radius: 6px; /* bordes redondeados */
+    cursor: pointer; /* muestra el cursor al pasar encima */
+    background: none; /* elimina cualquier color de fondo por defecto */
+}
+
+.login:hover,
+.create:hover {
+    text-decoration: underline; /* agrega una raya debajo del texto */
+}
+
+.login {
+    right: 170px; /* lo ubica un poco más a la izquierda */
+    color: #333; /* color de tx */
+    border: none; /* sin borde */
+    background: transparent; /* fondo transparente */
+    transition: all 0.2s ease; /* transición suave */
+}
+
+.create {
+    right: 30px; /* separa del login */
+    color: #3a48b8; /* tx. azul */
+    border: 1px solid #3a48b8;/* borde del tx. en azul*/
+    background-color: transparent; /* fondo transparente */
+    font-weight: bold; /* texto en negrita */
+    transition: all 0.2s ease; /* transición suave */
+}
+
+.login:hover {
+    color: #3a48b8; /* Cambia el color del texto a azul */
+    text-decoration: underline;/* subrayado */
+    background-color: #f0f2ff; /*  fondo azul claro */
+    border-radius: 6px;        /* mantiene bordes redondeados */
+}
+
+.create:hover {
+    background-color: #3a48b8; /* Le da un fondo azul muy claro */
+    color: #fff;  /* texto blanco solo en hover */
+    text-decoration: underline;  /* subrayado al pasar */
+}
+
+
+
+
+
