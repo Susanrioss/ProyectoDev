@@ -1,1 +1,34 @@
-Aqui va el codigo de la estructura de html, siempre que vayan a subir algo aqui pongan un //con su nombre y que parte de su codigo es.
+// bri html, barra de navegacion y botones //
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylebn.css">
+    <title>Barra de Búsqueda</title>
+</head>
+<body>
+    <header>
+
+        <a href="#" class="logo">
+        <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-black.png" alt="Logo DEV">
+        </a>      
+
+        <form>
+
+            <span class="search-icon"><i class="fa-solid fa-magnifying-glass"></i></span>
+            <input type="text" placeholder="Search...">
+            <span class="powered">Powered by <span class="algolia-logo">Algolia <i class="fa-brands fa-algolia"></i></span>
+            </span>
+
+        </form>
+        
+            <a href="login.html" class="login">Login</a>
+            <a href="create.html" class="create">Create account</a>
+
+    </header>
+</body>
+</html>
+
